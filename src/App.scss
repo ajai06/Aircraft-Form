@@ -1,0 +1,165 @@
+@import "~bootstrap/scss/bootstrap";
+
+.App {
+
+  text-align: center;
+}
+
+.home {
+  margin: 100px;
+}
+
+.btn-xl {
+  width: 300px;
+  height: 60px;
+  padding: 10px 10px;
+  line-height: 1.33;
+  border-radius: 35px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  display: inline-block;
+  cursor: text !important;
+}
+
+.btn-completed {
+  background: #2196f3;
+}
+
+.btn-completed:hover, .btn-completed:focus {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn-pending {
+  background-color: #c5c5c5;
+}
+
+.btn-pending:hover, .btn-pending:focus {
+  background-color: #c5c5c5;
+  color: white;
+}
+
+.btn-current-stage {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn-text {
+  float: left;
+  margin: 10px 10px;
+  vertical-align: middle;
+}
+
+.pending-btn-text {
+  color: darkblue;
+}
+
+.horizontal {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  border: none;
+  margin: 0 -6px;
+  opacity: unset;
+}
+
+.completed-horizontal {
+  background: #2196f3;
+}
+
+.pending-horizontal {
+  background: #c5c5c5;
+}
+
+.icon-item {
+  float: left;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  padding: 7px;
+
+}
+
+.check-icon {
+  background: green;
+  color: white;
+}
+
+.two-icon {
+  background: white;
+  color: darkblue;
+}
+
+// ------------------------------ //@at-root
+
+.heading-text{
+  color: darkblue;
+}
+
+.form-box{
+  background: #f1f1f1;
+}
+
+
+.text-input {
+  height: 60px;
+}
+
+#selectButtons input[type="radio"] {
+  display: none;
+}
+
+#selectButtons span {
+  display: inline-block;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: #d9d9d9;
+  color: black;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+#selectButtons span:hover{
+  background-color: #afadad;
+  color: white;
+  cursor: pointer;
+}
+
+#selectButtons input[type="radio"]:checked + span {
+  background-color: #2196f3;
+  color: white;
+  
+}
+
+.cancel-btn {
+  padding: 15px;
+  width: 150px;
+  border: #9d9d9d 1px solid;
+  background: white;
+  color: #9d9d9d;
+  margin-right: 20px;
+}
+.cancel-btn:hover{
+  background-color: #a7a7a7;
+  border: 1px solid #a7a7a7;
+}
+.cancel-btn:active,.cancel-btn:focus {
+  background-color: white;
+  color: #9d9d9d;
+  border: #9d9d9d 1px solid;
+  box-shadow: none;
+
+}
+
+.submit-btn {
+  padding: 15px;
+  width: 150px;
+  background: darkblue;
+}
+
+.view-form-data {
+  border : 2px solid grey;
+  padding: 30px;
+}

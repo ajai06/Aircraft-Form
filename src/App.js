@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import Stepper from "./components/Stepper";
+import InformationForm from "./components/InformationForm";
+import Summary from "./components/Summary";
+
+import "./App.scss";
 
 function App() {
+  const [formCompleted, setFormCompleted] = useState(false);
+  const [formData, setFormData] = useState([]);
+  const [cancelBtnClicked, setCancelBtnClicked] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="home">
+      <Stepper formCompleted={formCompleted} />
+
+      {!formCompleted ? (
+        <InformationForm
+          setFormCompleted={setFormCompleted}
+          setFormData={setFormData}
+          cancelBtnClicked={cancelBtnClicked}
+          formData={formData}
+        />
+      ) : (
+        <Summary
+          formData={formData}
+          setFormCompleted={setFormCompleted}
+          setFormData={setFormData}
+          setCancelBtnClicked={setCancelBtnClicked}
+        />
+      )}
     </div>
   );
 }
